@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DonorPlus.SelfSettings">
+
+    <ContentPage.Content>
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="350"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid RowSpacing="-1">
+
+                <Grid Grid.Row="0">
+
+                    <Grid RowSpacing="-1">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="200"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+
+                            <StackLayout
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand">
+
+                                <Label
+                                    x:Name="NotifLabel"
+                                    Text="Персональные настройки"
+                                    FontSize="Medium"
+                                    HorizontalTextAlignment="Center"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand"
+                                    FontAttributes="Bold">
+
+                                </Label>
+
+                            </StackLayout>
+
+                        </Grid>
+
+                        <Grid Grid.Row="1">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Grid.Column="0">
+
+                                <Label
+                                    x:Name="MailsLabel"
+                                    Text="Почтовые уведомления"
+                                    FontSize="Small"
+                                    Margin="20, 0, 0, 0"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand"
+                                    HorizontalTextAlignment="Start"
+                                    VerticalTextAlignment="Center"/>
+
+                            </Grid>
+
+                            <Grid Grid.Column="1">
+
+                                <Switch
+                                    x:Name="MailsSwitch"
+                                    IsToggled="False"
+                                    OnColor="Green"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand"
+                                    Toggled="MailsSwitch_Toggled">
+
+                                </Switch>
+
+                            </Grid>
+
+                        </Grid>
+
+                        <Grid Grid.Row="2">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Grid.Column="0">
+
+                                <Label
+                                    x:Name="PrivateLabel"
+                                    Text="Приватный аккаунт"
+                                    FontSize="Small"
+                                    Margin="20, 0, 0, 0"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand"
+                                    HorizontalTextAlignment="Start"
+                                    VerticalTextAlignment="Center"/>
+
+                            </Grid>
+
+                            <Grid Grid.Column="1">
+
+                                <Switch
+                                    x:Name="PrivateSwitch"
+                                    IsToggled="False"
+                                    OnColor="Green"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand"
+                                    Toggled="PrivateSwitch_Toggled">
+                                </Switch>
+
+                            </Grid>
+
+                        </Grid>
+
+                        <Grid Grid.Row="3"/>
+
+                    </Grid>
+
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+
+    </ContentPage.Content>
+
+</ContentPage>

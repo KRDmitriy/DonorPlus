@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:locals="clr-namespace:DonorPlus.Renderers"
+             xmlns:effects="clr-namespace:DonorPlus.Effects"
+             x:Class="DonorPlus.Models.SettingCell">
+
+    <ViewCell.View>
+
+        <Grid ColumnSpacing="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+
+                <locals:ImageRenderer
+                    x:Name="ImageIcon"
+                    Source="{Binding Path=ImageSource}"
+                    Aspect="AspectFit"
+                    Margin="10"
+                    WidthRequest="20"
+                    HeightRequest="20"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+
+                    <Image.Effects>
+                        <effects:TintImageEffect
+                        x:Name="PhotoEffect"/>
+                    </Image.Effects>
+
+                </locals:ImageRenderer>
+
+            </Grid>
+
+            <Grid Grid.Column="1">
+
+                <Label
+                x:Name="TextLabel"
+                Text="{Binding Path=Text}"
+                FontSize="Default"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"/>
+
+            </Grid>
+            
+        </Grid>
+
+    </ViewCell.View>
+    
+</ViewCell>

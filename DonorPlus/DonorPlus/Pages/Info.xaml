@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DonorPlus.Info">
+
+    <ContentPage.Content>
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid RowSpacing="-1">
+
+                <Grid Grid.Row="0">
+
+                    <Grid RowSpacing="-1">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+
+                            <StackLayout
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand">
+
+                                <Label
+                                    x:Name="InfoLabel"
+                                    Text="Информация"
+                                    FontSize="Medium"
+                                    HorizontalTextAlignment="Center"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand"
+                                    FontAttributes="Bold">
+
+                                </Label>
+
+                            </StackLayout>
+
+                        </Grid>
+
+                        <Grid Grid.Row="1">
+
+                            <Frame
+                                x:Name="InfoFrame"
+                                HasShadow="True"
+                                CornerRadius="20"
+                                Padding="0"
+                                Margin="20, 10, 20, 5"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand">
+
+                                <Grid
+                                    RowSpacing="0"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand">
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid Grid.Row="0">
+
+                                        <StackLayout
+                                            x:Name="SurnameLabelStack"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="FillAndExpand">
+
+                                            <Label 
+                                                x:Name="CreatorTextLabel"
+                                                Text="Создатель:"
+                                                Margin="45, 0, 0, 0"
+                                                FontSize="Small"
+                                                HorizontalOptions="StartAndExpand"
+                                                VerticalOptions="FillAndExpand"
+                                                HorizontalTextAlignment="Start"
+                                                VerticalTextAlignment="Center"/>
+
+                                        </StackLayout>
+
+                                    </Grid>
+
+                                    <Grid Grid.Row="1">
+
+                                        <Label
+                                            x:Name="CreatorLabel"
+                                            Text="Кара Дмитрий"
+                                            Margin="15, 0, 0, 0"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Start"/>
+
+                                    </Grid>
+
+                                </Grid>
+
+                            </Frame>
+
+                        </Grid>
+
+                        <Grid Grid.Row="2">
+
+                            <Frame
+                                x:Name="Info2Frame"
+                                HasShadow="True"
+                                CornerRadius="20"
+                                Padding="0"
+                                Margin="20, 10, 20, 5"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand">
+
+                                <Grid
+                                    RowSpacing="0"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand">
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid Grid.Row="0">
+
+                                        <StackLayout
+                                            x:Name="BossStack"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="FillAndExpand">
+
+                                            <Label 
+                                                x:Name="BossTextLabel"
+                                                Text="Научный руководитель:"
+                                                Margin="45, 0, 0, 0"
+                                                FontSize="Small"
+                                                HorizontalOptions="StartAndExpand"
+                                                VerticalOptions="FillAndExpand"
+                                                HorizontalTextAlignment="Start"
+                                                VerticalTextAlignment="Center"/>
+
+                                        </StackLayout>
+
+                                    </Grid>
+
+                                    <Grid Grid.Row="1">
+
+                                        <Label
+                                            x:Name="BossLabel"
+                                            Text="Авдошин Сергей Михайлович"
+                                            Margin="15, 0, 0, 0"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Start"/>
+
+                                    </Grid>
+
+                                </Grid>
+
+                            </Frame>
+
+                        </Grid>
+
+                        <Grid Grid.Row="3">
+
+                            <Frame
+                                x:Name="Info3Frame"
+                                HasShadow="True"
+                                CornerRadius="20"
+                                Padding="0"
+                                Margin="20, 10, 20, 5"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand">
+
+                                <Grid
+                                    RowSpacing="0"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand">
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid Grid.Row="0">
+
+                                        <StackLayout
+                                            x:Name="ThanksToLabelStack"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="FillAndExpand">
+
+                                            <Label 
+                                                x:Name="ThanksToTextLabel"
+                                                Text="Благодарим за помощь:"
+                                                Margin="45, 0, 0, 0"
+                                                FontSize="Small"
+                                                HorizontalOptions="StartAndExpand"
+                                                VerticalOptions="FillAndExpand"
+                                                HorizontalTextAlignment="Start"
+                                                VerticalTextAlignment="Center"/>
+
+                                        </StackLayout>
+
+                                    </Grid>
+
+                                    <Grid Grid.Row="1">
+
+                                        <Label
+                                            x:Name="ThanksToLabel"
+                                            Text="Горденко Мария Константиновна"
+                                            Margin="15, 0, 0, 0"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Start"/>
+
+                                    </Grid>
+
+                                </Grid>
+
+                            </Frame>
+
+                        </Grid>
+
+                        <Grid Grid.Row="4">
+
+                            <Frame
+                                x:Name="ExtraInfoFrame"
+                                HasShadow="True"
+                                CornerRadius="20"
+                                Padding="0"
+                                Margin="20, 10, 20, 5"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand">
+
+                                <Grid
+                                    RowSpacing="0"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand">
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid Grid.Row="0">
+
+                                        <StackLayout
+                                            x:Name="ExtraInfoLabelStack"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="FillAndExpand">
+
+                                            <Label 
+                                                x:Name="ExtraInfoTextLabel"
+                                                Text="Больше о донорстве:"
+                                                Margin="45, 0, 0, 0"
+                                                FontSize="Small"
+                                                HorizontalOptions="StartAndExpand"
+                                                VerticalOptions="FillAndExpand"
+                                                HorizontalTextAlignment="Start"
+                                                VerticalTextAlignment="Center"/>
+
+                                        </StackLayout>
+
+                                    </Grid>
+
+                                    <Grid Grid.Row="1">
+
+                                        <Label
+                                            x:Name="ExtraInfoLabel"
+                                            Text="http://www.consultant.ru/document/cons_doc_LAW_132904/"
+                                            Margin="15, 0, 0, 0"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Start">
+                                            
+                                            <Label.GestureRecognizers>
+
+                                                <TapGestureRecognizer Tapped="Link_Tapped"/>
+
+                                            </Label.GestureRecognizers>
+                                            
+                                        </Label>
+
+                                    </Grid>
+
+                                </Grid>
+
+                            </Frame>
+
+                        </Grid>
+
+                    </Grid>
+
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+
+    </ContentPage.Content>
+
+</ContentPage>

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:renderers="clr-namespace:DonorPlus.Renderers"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="DonorPlus.Menu">
+
+    <ContentPage.Content>
+
+        <StackLayout>
+
+            <Grid RowSpacing="-1" x:Name="MainGrid">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="250"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+
+                    <Grid RowSpacing="-1">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+
+                            <StackLayout
+                                x:Name="MenuStack">
+                            </StackLayout>
+
+                        </Grid>
+
+                        <Grid Grid.Row="1">
+
+                            <StackLayout
+                                x:Name="ProfileStack">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                    x:Name="ProfileButton"
+                                    Tapped="GoToProfile"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+
+                        </Grid>
+
+                        <Grid Grid.Row="2">
+
+                            <StackLayout
+                                x:Name="RequestStack">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                    x:Name="RequestButton"
+                                    Tapped="GoToRequest"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+
+                        </Grid>
+
+                        <Grid
+                            Grid.Row="3">
+
+                            <StackLayout
+                                x:Name="InfoStack">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        x:Name="InfoButton"
+                                        Tapped="GoToInfo"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+
+                        </Grid>
+
+                        <Grid Grid.Row="4">
+
+                            <StackLayout
+                                x:Name="SettingsStack">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        x:Name="SettingsButton"
+                                        Tapped="GoToSettings"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+
+                        </Grid>
+
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                </Grid>
+
+            </Grid>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+    
+</ContentPage>

@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DonorPlus.Renderers"
+             xmlns:controls="clr-namespace:DonorPlus.Controls"
+             x:Class="DonorPlus.RequestPage">
+    
+    <ContentPage.Content>
+
+        <Grid RowSpacing="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+
+                <Grid>
+
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+
+                        <Label
+                            x:Name="MainLabel"
+                            Text="Новый запрос"
+                            FontSize="Medium"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            FontAttributes="Bold">
+
+                        </Label>
+
+                    </StackLayout>
+
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Row="1">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+
+                    <Frame
+                        HasShadow="True"
+                        CornerRadius="20"
+                        Padding="0"
+                        Margin="20, 10, 20, 5"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+
+                        <Grid
+                            RowSpacing="0"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+
+                                <StackLayout
+                                    x:Name="BloodGroupLabelStack"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand">
+
+                                    <Label 
+                                        x:Name="BloodGroupLabel"
+                                        Text="Группа крови"
+                                        Margin="45, 0, 0, 0"
+                                        FontSize="Small"
+                                        HorizontalOptions="StartAndExpand"
+                                        VerticalOptions="FillAndExpand"
+                                        HorizontalTextAlignment="Start"
+                                        VerticalTextAlignment="Center"/>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                            <Grid Grid.Row="1">
+
+                                <StackLayout
+                                    x:Name="BloodGroupEntryStack"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand">
+
+                                    <!--<local:EntryRenderer
+                                        x:Name="BloodGroupEntry"
+                                        Placeholder="Введите группу крови"
+                                        Margin="15, 0, 0, 0"
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="FillAndExpand"
+                                        HorizontalTextAlignment="Start"/>-->
+
+                                    <Picker x:Name="BloodGroupEntry"
+                                            Margin="15, 0, 0, 0"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="FillAndExpand">
+                                        <Picker.Items>
+                                            <x:String>I</x:String>
+                                            <x:String>II</x:String>
+                                            <x:String>III</x:String>
+                                            <x:String>IV</x:String>
+                                        </Picker.Items>
+                                    </Picker>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                        </Grid>
+
+                    </Frame>
+
+                </Grid>
+
+                <Grid Grid.Row="1">
+
+                    <Frame
+                        HasShadow="True"
+                        CornerRadius="20"
+                        Padding="0"
+                        Margin="20, 10, 20, 5"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+
+                        <Grid
+                            RowSpacing="0"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+
+                                <StackLayout
+                                    x:Name="RFactorLabelStack"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand">
+
+                                    <Label 
+                                        x:Name="RFactorLabel"
+                                        Text="Резус-фактор"
+                                        Margin="45, 0, 0, 0"
+                                        FontSize="Small"
+                                        HorizontalOptions="StartAndExpand"
+                                        VerticalOptions="FillAndExpand"
+                                        HorizontalTextAlignment="Start"
+                                        VerticalTextAlignment="Center"/>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                            <Grid Grid.Row="1">
+
+                                <StackLayout
+                                    x:Name="RFactorEntryStack"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand">
+
+                                    <!--<local:EntryRenderer
+                                        x:Name="RFactorEntry"
+                                        Placeholder="Введите резус-фактор"
+                                        Margin="15, 0, 0, 0"
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="FillAndExpand"
+                                        HorizontalTextAlignment="Start"/>-->
+
+                                    <Picker x:Name="RFactorEntry"
+                                            Margin="15, 0, 0, 0"
+                                            SelectedItem="Нет данных"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="FillAndExpand">
+                                        <Picker.Items>
+                                            <x:String>+</x:String>
+                                            <x:String>-</x:String>
+                                        </Picker.Items>
+                                    </Picker>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                        </Grid>
+
+                    </Frame>
+
+                </Grid>
+
+                <Grid Grid.Row="2">
+
+                    <Frame
+                        HasShadow="True"
+                        CornerRadius="20"
+                        Padding="0"
+                        Margin="20, 10, 20, 5"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+
+                        <Grid
+                            RowSpacing="0"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+
+                                <StackLayout
+                                    x:Name="ExtraBloodDataLabelStack"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand">
+
+                                    <Label 
+                                        x:Name="ExtraBloodDataLabel"
+                                        Text="Доп. данные"
+                                        Margin="45, 0, 0, 0"
+                                        FontSize="Small"
+                                        HorizontalOptions="StartAndExpand"
+                                        VerticalOptions="FillAndExpand"
+                                        HorizontalTextAlignment="Start"
+                                        VerticalTextAlignment="Center"/>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                            <Grid Grid.Row="1">
+
+                                <StackLayout
+                                    x:Name="ExtraBloodDataEntryStack"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand">
+
+                                    <local:EntryRenderer
+                                        x:Name="ExtraBloodDataEntry"
+                                        Placeholder="Введите доп. данные"
+                                        Margin="15, 0, 0, 0"
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="FillAndExpand"
+                                        HorizontalTextAlignment="Start"/>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                        </Grid>
+
+                    </Frame>
+
+                </Grid>
+
+                <Grid Grid.Row="3">
+
+                    <Frame
+                        HasShadow="True"
+                        CornerRadius="20"
+                        Padding="0"
+                        Margin="20, 10, 20, 5"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+
+                        <Grid
+                            RowSpacing="0"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+
+                                <StackLayout
+                                    x:Name="DescriptionLabelStack"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand">
+
+                                    <Label 
+                                        x:Name="DescriptionLabel"
+                                        Text="Описание"
+                                        Margin="45, 0, 0, 0"
+                                        FontSize="Small"
+                                        HorizontalOptions="StartAndExpand"
+                                        VerticalOptions="FillAndExpand"
+                                        HorizontalTextAlignment="Start"
+                                        VerticalTextAlignment="Center"/>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                            <Grid Grid.Row="1">
+
+                                <StackLayout
+                                    x:Name="DescriptionEntryStack"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand">
+
+                                    <controls:ExtendedEditorControl
+                                        x:Name="DescriptionEntry"
+                                        Placeholder="Введите описание"
+                                        Margin="15, 0, 0, 0"
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="FillAndExpand"/>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                        </Grid>
+
+                    </Frame>
+
+                </Grid>
+
+                <Grid Grid.Row="4">
+
+                    <Button x:Name="SendButton"
+                            Text="Отправить"
+                            CornerRadius="20"
+                            Margin="30, 10, 30, 10"
+                            Clicked="SendButton_Clicked"/>
+
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+
+    </ContentPage.Content>
+    
+</ContentPage>

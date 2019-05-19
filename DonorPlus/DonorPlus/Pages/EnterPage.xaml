@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DonorPlus.Renderers"
+             x:Class="DonorPlus.EnterPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Content>
+        
+        <Grid RowSpacing="0" x:Name="MainGrid">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+
+                <!--<local:ActivityIndicatorRenderer
+                    x:Name="ActivityInd"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Color="Blue"
+                    HeightRequest="50"
+                    WidthRequest="50"
+                    IsEnabled="False"
+                    IsVisible="False"
+                    IsRunning="False"/>-->
+
+            </Grid>
+            
+            <Grid Grid.Row="1">
+
+                <Grid RowSpacing="0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+
+                        <local:EntryRenderer
+                            x:Name="Login"
+                            Placeholder="Почта или телефон"
+                            Margin="10, 0, 10, 0"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"/>
+
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+
+                        <local:EntryRenderer
+                            x:Name="Password"
+                            Placeholder="Пароль"
+                            IsPassword="True"
+                            Margin="10, 0, 10, 0"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"/>
+
+                    </Grid>
+
+                    <Grid Grid.Row="2"
+                          Margin="0, 10, 0, 0">
+
+                        <Grid ColumnSpacing="10">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid  Grid.Column="0">
+
+                                <Button
+                                    x:Name="EnterButton"
+                                    Text="Войти"
+                                    Margin="10, 0, 0, 0"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand"
+                                    BorderWidth="1"
+                                    BorderColor="WhiteSmoke"
+                                    CornerRadius="20"
+                                    Clicked="EnterButton_Clicked"/>
+
+                            </Grid>
+
+                            <Grid Grid.Column="1">
+
+                                <Button
+                                    x:Name="Foggot"
+                                    Text="Забыли пароль?"
+                                    Margin="0, 0, 10, 0"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand"
+                                    BorderWidth="1"
+                                    BorderColor="WhiteSmoke"
+                                    CornerRadius="20"
+                                    Clicked="Foggot_Clicked"/>
+
+                            </Grid>
+
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid Grid.Row="3"/>
+
+                    <Grid Grid.Row="4">
+
+                        <Label
+                            x:Name="RegLabel"
+                            Text="Первый раз?"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+
+                    </Grid>
+
+                    <Grid Grid.Row="5"
+                          Margin="0, 10, 0, 0">
+
+                        <Button
+                            x:Name="RegButton"
+                            Text="Регистрация"
+                            Margin="20, 0, 20, 0"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            BorderWidth="1"
+                            BorderColor="WhiteSmoke"
+                            CornerRadius="20"
+                            Clicked="RegButton_Clicked"/>
+
+                    </Grid>
+
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Row="2"/>
+
+        </Grid>
+
+    </ContentPage.Content>
+    
+</ContentPage>

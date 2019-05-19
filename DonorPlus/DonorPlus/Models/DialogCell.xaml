@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DonorPlus.Models.DialogCell">
+
+    <ViewCell.View>
+
+        <Frame
+            x:Name="MainFrame"
+            HasShadow="True"
+            CornerRadius="20"
+            BorderColor="WhiteSmoke"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            Padding="0"
+            Margin="20, 145, 20, 5">
+
+            <Grid RowSpacing="0" ColumnSpacing="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0" Grid.Row="0">
+
+                    <StackLayout
+                        x:Name="InfoStack"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        Margin="0"
+                        Padding="0">
+
+                        <Label
+                            x:Name="InfoLabel"
+                            Text="ID"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            Margin="20, 0, 0, 0"/>
+
+                    </StackLayout>
+
+                </Grid>
+
+                <Grid Grid.Column="1" Grid.Row="0">
+
+                    <StackLayout
+                        x:Name="SurnameStack"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        Margin="0"
+                        Padding="0">
+
+                        <Label
+                            x:Name="SurnameLabel"
+                            Text="{Binding Surname}"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            Margin="0"/>
+
+                    </StackLayout>
+
+                </Grid>
+
+                <Grid Grid.Column="0" Grid.Row="1">
+
+                    <StackLayout
+                        x:Name="IDStack"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        Margin="0"
+                        Padding="0">
+
+                        <Label
+                            x:Name="IDLabel"
+                            Text="{Binding ID}"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            Margin="20, 0, 0, 0"/>
+
+                    </StackLayout>
+
+                </Grid>
+
+                <Grid Grid.Column="1" Grid.Row="1">
+
+                    <StackLayout
+                        x:Name="NameStack"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        Margin="0"
+                        Padding="0">
+
+                        <Label
+                            x:Name="NameLabel"
+                            Text="{Binding Name}"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            Margin="0"/>
+
+                    </StackLayout>
+
+                </Grid>
+
+            </Grid>
+
+        </Frame>
+
+    </ViewCell.View>
+
+</ViewCell>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DonorPlus"
+             x:Class="DonorPlus.MainPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <NavigationPage
+        Icon="Resourses/news.png">
+        <x:Arguments>
+            <local:News/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage
+        Icon="Resourses/search.png">
+        <x:Arguments>
+            <local:Search/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage
+        Icon="Resourses/message.png">
+        <x:Arguments>
+            <local:Dialogs/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage
+        Icon="Resourses/notification.png">
+        <x:Arguments>
+            <local:Notifications/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage
+        x:Name="NavigationMenu"
+        Icon="Resourses/menu.png">
+        <x:Arguments>
+            <local:Menu/>
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>

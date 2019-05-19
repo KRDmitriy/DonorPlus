@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:DonorPlus.Controls"
+             x:Class="DonorPlus.Models.RequestCell">
+    
+    <ViewCell.View>
+
+        <Frame x:Name="MainFrame"
+               CornerRadius="20"
+               Padding="0"
+               Margin="5, 5, 15, 5">
+            
+            <Grid RowSpacing="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Frame Grid.Row="0"
+                       CornerRadius="20"
+                       Padding="0"
+                       Margin="5">
+
+                    <Grid x:Name="Header"
+                          Padding="0"
+                          Margin="0"
+                          RowSpacing="0">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="40"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            x:Name="BloodGroupLabel"
+                            Text="Группа крови :"
+                            FontSize="Small"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            VerticalTextAlignment="Center"
+                            Margin="30, 10, 0, 0"/>
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            x:Name="BloodGroupDataLabel"
+                            Text="{Binding Path=BloodGroup}"
+                            FontSize="Small"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            VerticalTextAlignment="Center"
+                            Margin="0, 10, 0, 0"/>
+
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            x:Name="RFactorLabel"
+                            Text="Резус-фактор :"
+                            FontSize="Small"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            VerticalTextAlignment="Center"
+                            Margin="30, 5, 0, 0"/>
+
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            x:Name="RFactorDataLabel"
+                            Text="{Binding Path=RFactor}"
+                            FontSize="Small"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            VerticalTextAlignment="Center"
+                            Margin="0, 10, 0, 0"/>
+
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            x:Name="ExtraBloodDataLabel"
+                            Text="Доп. данные :"
+                            FontSize="Small"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            VerticalTextAlignment="Center"
+                            Margin="30, 10, 0, 0"/>
+
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            x:Name="ExtraBloodDataValueLabel"
+                            Text="{Binding Path=ExtraBloodData}"
+                            FontSize="Small"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            VerticalTextAlignment="Center"
+                            Margin="0, 10, 0, 0"/>
+
+                        <Label
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            x:Name="RegionLabel"
+                            Text="Регион :"
+                            FontSize="Small"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            VerticalTextAlignment="Center"
+                            Margin="30, 10, 0, 0"/>
+
+                        <Label
+                            Grid.Row="3"
+                            Grid.Column="1"
+                            x:Name="RegionDataLabel"
+                            Text="{Binding Path=Region}"
+                            FontSize="Small"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            VerticalTextAlignment="Center"
+                            Margin="0, 10, 0, 0"/>
+
+                        <Label
+                            Grid.Row="4"
+                            Grid.Column="0"
+                            x:Name="AuthorLabel"
+                            Text="Автор запроса :"
+                            FontSize="Small"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            VerticalTextAlignment="Center"
+                            Margin="30, 10, 0, 10"/>
+
+                        <Label
+                            Grid.Row="4"
+                            Grid.Column="1"
+                            x:Name="AuthorDataLabel"
+                            Text="{Binding Path=AuthorName}"
+                            FontSize="Small"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            VerticalTextAlignment="Center"
+                            Margin="0, 10, 0, 10">
+
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="Action"
+                                                      Tapped="ShowAuthor"/>
+                            </Label.GestureRecognizers>
+
+                        </Label>
+
+                        <Label x:Name="AuthorID"
+                               Text="{Binding Path=AuthorID}"
+                               IsVisible="False"/>
+
+                    </Grid>
+                    
+                </Frame>
+
+                <Grid Grid.Row="1">
+
+                    <!--<controls:ExtendedEditorControl
+                        x:Name="Description"
+                        Text="{Binding Path=Description}"
+                        IsReadOnly="True"
+                        Margin="15, 0, 0, 0"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"/>-->
+
+                    <Label x:Name="Description"
+                           Text="{Binding Path=Description}"
+                           Margin="30, 0, 0, 0"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Start"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand"/>
+
+                </Grid>
+
+            </Grid>
+            
+        </Frame>
+
+    </ViewCell.View>
+    
+</ViewCell>

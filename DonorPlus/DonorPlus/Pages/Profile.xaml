@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DonorPlus.Profile"
+             xmlns:local="clr-namespace:DonorPlus.Renderers"
+             xmlns:effects="clr-namespace:DonorPlus.Effects"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Content>
+
+        <Grid
+                RowSpacing="0"
+                x:Name="MainGrid">
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+
+            <Grid
+                Grid.Row="0"
+                RowSpacing="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="250"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0"
+                      ColumnSpacing="0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="40"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+
+                        <Image x:Name="Photo"
+                               Margin="10, 30, 0, 0"
+                               Aspect="AspectFit"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               Source="Resources/emptyPhoto.png">
+
+                            <Image.Effects>
+                                <effects:TintImageEffect x:Name="PhotoEffect"/>
+                            </Image.Effects>
+
+                        </Image>
+
+
+                    </Grid>
+
+                    <Grid
+                        Grid.Column="1"
+                        x:Name="OwnPage">
+
+                        <Grid RowSpacing="0">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="1">
+
+                                <local:ImageRenderer
+                                    x:Name="EditImage"
+                                    Source="Resources/edit.png"
+                                    Aspect="AspectFit"
+                                    Margin="10"
+                                    WidthRequest="20"
+                                    HeightRequest="20"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand">
+
+                                    <Image.Effects>
+                                        <effects:TintImageEffect
+                                            x:Name="EditImageEffect"/>
+                                    </Image.Effects>
+
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Tapped="ChangeProfile"/>
+                                    </Image.GestureRecognizers>
+
+                                </local:ImageRenderer>
+
+                            </Grid>
+
+                            <Grid Grid.Row="2">
+
+                                <local:ImageRenderer
+                                    x:Name="SettingsImage"
+                                    Source="Resources/settings.png"
+                                    Aspect="AspectFit"
+                                    Margin="10"
+                                    WidthRequest="20"
+                                    HeightRequest="20"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand">
+
+                                    <Image.Effects>
+                                        <effects:TintImageEffect
+                                            x:Name="SettingsImageEffect"/>
+                                    </Image.Effects>
+
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Tapped="SettingsImage_Tapped"/>
+                                    </Image.GestureRecognizers>
+
+                                </local:ImageRenderer>
+
+                            </Grid>
+
+                        </Grid>
+
+                    </Grid>
+
+                </Grid>
+
+                <Grid Grid.Row="1">
+
+                    <StackLayout
+                        Orientation="Horizontal"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+
+                        <Label
+                            x:Name="NameLabel"
+                            Text=""
+                            FontSize="Default"
+                            HorizontalOptions="Start"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            VerticalTextAlignment="Center"
+                            Margin="30, 0, 10, 0"/>
+
+                        <local:ImageRenderer
+                            x:Name="SpecialImage"
+                            Source="Resources/checked.png"
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            WidthRequest="20"
+                            HeightRequest="20"
+                            Margin="5, 15, 20, 15">
+
+                            <Image.Effects>
+                                <effects:TintImageEffect
+                                    x:Name="SpecialPhotoEffect"/>
+                            </Image.Effects>
+                        </local:ImageRenderer>
+
+                    </StackLayout>
+
+                </Grid>
+
+                <Grid Grid.Row="2"
+                      x:Name="BloodInfo"
+                      RowSpacing="0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+
+                        <StackLayout
+                            Orientation="Horizontal"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+
+                            <Label
+                                x:Name="BloodGroupLabel"
+                                Text="Группа крови :"
+                                FontSize="Small"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalTextAlignment="Start"
+                                VerticalTextAlignment="Center"
+                                Margin="30, 10, 0, 0"/>
+
+                            <Label
+                                x:Name="BloodGroupDataLabel"
+                                Text=""
+                                FontSize="Small"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalTextAlignment="Start"
+                                VerticalTextAlignment="Center"
+                                Margin="10, 10, 0, 0"/>
+
+                        </StackLayout>
+
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+
+                        <StackLayout
+                            Orientation="Horizontal"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+
+                            <Label
+                                x:Name="RFactorLabel"
+                                Text="Резус-фактор :"
+                                FontSize="Small"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalTextAlignment="Start"
+                                VerticalTextAlignment="Center"
+                                Margin="30, 10, 0, 0"/>
+
+                            <Label
+                                x:Name="RFactorDataLabel"
+                                Text=""
+                                FontSize="Small"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalTextAlignment="Start"
+                                VerticalTextAlignment="Center"
+                                Margin="10, 10, 0, 0"/>
+
+                        </StackLayout>
+
+                    </Grid>
+
+                </Grid>
+
+                <Grid Grid.Row="3"
+                      x:Name="PersonalInfo"
+                      RowSpacing="0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+
+                        <StackLayout
+                            Orientation="Horizontal"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+
+                            <Label
+                                x:Name="EmailLabel"
+                                Text="Эл. почта :"
+                                FontSize="Small"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalTextAlignment="Start"
+                                VerticalTextAlignment="Center"
+                                Margin="30, 10, 0, 0"/>
+
+                            <Label
+                                x:Name="EmailDataLabel"
+                                Text=""
+                                FontSize="Small"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalTextAlignment="Start"
+                                VerticalTextAlignment="Center"
+                                Margin="10, 10, 0, 0"/>
+
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer
+                                Tapped="SendEmail_Tapped"/>
+                            </StackLayout.GestureRecognizers>
+
+                        </StackLayout>
+
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+
+                        <StackLayout
+                            Orientation="Horizontal"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+
+                            <Label
+                                x:Name="PhoneLabel"
+                                Text="Телефон :"
+                                FontSize="Small"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalTextAlignment="Start"
+                                VerticalTextAlignment="Center"
+                                Margin="30, 10, 0, 0"/>
+
+                            <Label
+                                x:Name="PhoneDataLabel"
+                                Text=""
+                                FontSize="Small"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalTextAlignment="Start"
+                                VerticalTextAlignment="Center"
+                                Margin="10, 10, 0, 0"/>
+
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="Call_Tapped"/>
+                            </StackLayout.GestureRecognizers>
+
+                        </StackLayout>
+
+                    </Grid>
+
+                </Grid>
+
+                <Grid x:Name="MyPageExtra"
+                      Grid.Row="4"
+                      ColumnSpacing="20"
+                      Margin="20, 20, 20, 0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+
+                        <Button
+                            x:Name="MyRequestsButton"
+                            Text="Мои запросы"
+                            FontSize="Small"
+                            CornerRadius="20"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            WidthRequest="70"
+                            HeightRequest="50"
+                            Clicked="MyRequestsButton_Clicked"/>
+
+                    </Grid>
+
+                    <Grid Grid.Column="1">
+
+                        <Button
+                            x:Name="MyHistoryButton"
+                            Text="Журнал"
+                            FontSize="Small"
+                            CornerRadius="20"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            WidthRequest="70"
+                            HeightRequest="50"
+                            Clicked="MyHistoryButton_Clicked"/>
+
+                    </Grid>
+
+                </Grid>
+
+                <Grid x:Name="OtherPage"
+                      Grid.Row="5"
+                      ColumnSpacing="20"
+                      Margin="20, 20, 20, 0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+
+                        <Button
+                            x:Name="DialogButton"
+                            Text="Написать"
+                            FontSize="Small"
+                            CornerRadius="20"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            WidthRequest="70"
+                            HeightRequest="50"
+                            Clicked="GoToDialog"/>
+
+                    </Grid>
+
+                    <Grid Grid.Column="1">
+
+                        <Button
+                            x:Name="AddToFriendsButton"
+                            Text="В друзья"
+                            FontSize="Small"
+                            CornerRadius="20"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            WidthRequest="70"
+                            HeightRequest="50"
+                            Clicked="AddToFriends"/>
+
+                    </Grid>
+
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+
+    </ContentPage.Content>
+
+</ContentPage>

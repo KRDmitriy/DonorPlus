@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DonorPlus.News"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Content>
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid RowSpacing="0">
+
+                <Grid Grid.Row="0">
+
+                    <Grid RowSpacing="10">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+
+                            <StackLayout
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand">
+
+                                <Label
+                                    x:Name="NewsLabel"
+                                    Text="Новости"
+                                    FontSize="Medium"
+                                    HorizontalTextAlignment="Center"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand"
+                                    FontAttributes="Bold">
+
+                                </Label>
+
+                            </StackLayout>
+
+                        </Grid>
+
+                        <Grid Grid.Row="1">
+
+                            <StackLayout
+                                x:Name="Stack0"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"/>
+
+                        </Grid>
+
+                        <Grid Grid.Row="2">
+
+                            <StackLayout
+                                x:Name="Stack1"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"/>
+
+                        </Grid>
+
+                        <Grid Grid.Row="3">
+
+                            <StackLayout
+                                x:Name="Stack2"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"/>
+                            
+                        </Grid>
+
+                    </Grid>
+
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+
+    </ContentPage.Content>
+    
+</ContentPage>

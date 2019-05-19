@@ -1,0 +1,12 @@
+D:\DonorPlus\DonorPlusLib\bin\Release\DonorPlusLib.dll
+D:\DonorPlus\DonorPlusLib\bin\Release\DonorPlusLib.pdb
+D:\DonorPlus\DonorPlusLib\obj\Release\DonorPlusLib.csprojAssemblyReference.cache
+D:\DonorPlus\DonorPlusLib\obj\Release\DonorPlusLib.csproj.CoreCompileInputs.cache
+D:\DonorPlus\DonorPlusLib\obj\Release\DonorPlusLib.dll
+D:\DonorPlus\DonorPlusLib\obj\Release\DonorPlusLib.pdb
+D:\Projects\DonorPlus\DonorPlusLib\bin\Release\DonorPlusLib.dll
+D:\Projects\DonorPlus\DonorPlusLib\bin\Release\DonorPlusLib.pdb
+D:\Projects\DonorPlus\DonorPlusLib\obj\Release\DonorPlusLib.csprojAssemblyReference.cache
+D:\Projects\DonorPlus\DonorPlusLib\obj\Release\DonorPlusLib.csproj.CoreCompileInputs.cache
+D:\Projects\DonorPlus\DonorPlusLib\obj\Release\DonorPlusLib.dll
+D:\Projects\DonorPlus\DonorPlusLib\obj\Release\DonorPlusLib.pdb

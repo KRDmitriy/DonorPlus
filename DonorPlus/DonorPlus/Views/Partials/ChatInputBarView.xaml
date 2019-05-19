@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="DonorPlus.Views.Partials.ChatInputBarView" 
+             xmlns:controls="clr-namespace:DonorPlus.Controls"
+             BackgroundColor="LightGray">
+     <Grid RowSpacing="0" 
+           ColumnSpacing="0"
+           BackgroundColor="LightGray"
+           Margin="0, 0, 10, 0">
+               <Grid.RowDefinitions>
+                     <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+        <controls:ExtendedEditorControl x:Name="chatTextInput" 
+                 Text="{Binding TextToSend}" 
+                 Margin="20, 1, 1, 1"  
+                 TextColor="Black" 
+                 Keyboard="Chat"  
+                 IsExpandable="true"
+                 HorizontalOptions="FillAndExpand" 
+                 PlaceholderColor="LightGray"
+                 Placeholder="Type your message here"
+                 Grid.Row="0" 
+                 Grid.Column="0" />
+        <!--<Label Text="Send"
+               Grid.Row="0"
+               Grid.Column="1"
+               VerticalTextAlignment="Center">
+            <Label.GestureRecognizers> 
+                <TapGestureRecognizer
+                      Command="{Binding OnSendCommand}"
+                      Tapped="Handle_Completed"/>
+           </Label.GestureRecognizers>
+       </Label>-->
+        <Image
+           Source="send"
+           WidthRequest="30"
+           HeightRequest="30"
+           BackgroundColor="LightGray"
+           Grid.Row="0"
+           Grid.Column="1">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                    Command="{Binding OnSendCommand}"
+                    Tapped="Handle_Completed"/>
+            </Image.GestureRecognizers>
+        </Image>
+    </Grid>
+</ContentView>

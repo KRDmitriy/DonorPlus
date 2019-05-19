@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Local="clr-namespace:DonorPlus.Renderers"
+             x:Class="DonorPlus.ConfirmPage"
+             NavigationPage.HasNavigationBar="False">
+    
+  <ContentPage.Content>
+
+        <Grid RowSpacing="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0"/>
+
+            <Grid Grid.Row="1">
+
+                <Grid RowSpacing="0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="70"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+
+                        <Label
+                            x:Name="ConfirmLabel"
+                            Text="Подтвердите эл. почту"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"/>
+
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+
+                        <Local:EntryRenderer
+                            x:Name="CodeEntry"
+                            Placeholder="Введите код"
+                            Margin="15, 0, 0, 0"
+                            HorizontalTextAlignment="Start"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"/>
+
+                    </Grid>
+
+                    <Grid Grid.Row="2"
+                          Margin="0, 20, 0, 0">
+                        
+                        <Button
+                            x:Name="ConfirmButton"
+                            Text="Подвердить"
+                            Margin="20, 0, 20, 0"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            BorderWidth="1"
+                            BorderColor="WhiteSmoke"
+                            CornerRadius="20"
+                            Clicked="ConfirmButton_Clicked"/>
+                        
+                    </Grid>
+
+                </Grid>
+                    
+            </Grid>
+
+            <Grid Grid.Row="2"/>
+
+        </Grid>
+      
+  </ContentPage.Content>
+    
+</ContentPage>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Devices>
+  <Device id="CLCDU18709013817">
+    <ResultingAbi></ResultingAbi>
+    <SdkVersion>27</SdkVersion>
+  </Device>
+  <Device id="emulator-5554">
+    <ResultingAbi>x86</ResultingAbi>
+    <SdkVersion>27</SdkVersion>
+  </Device>
+</Devices>

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DonorPlus.Renderers"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="DonorPlus.Notifications">
+    
+    <ContentPage.Content>
+
+        <Grid RowSpacing="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+
+                <Grid>
+
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+
+                        <Label x:Name="NotifLabel"
+                               Text="Уведомления"
+                               FontSize="Medium"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               FontAttributes="Bold">
+
+                        </Label>
+
+                    </StackLayout>
+
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Row="1"
+                  x:Name="MySearchBar">
+
+                <Grid ColumnSpacing="10">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="60"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+
+                        <local:ImageRenderer
+                            x:Name="SearchImage"
+                            Source="Resourses/search.png"
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            Margin="30, 0, 5, 0"/>
+
+                    </Grid>
+
+                    <Grid Grid.Column="1">
+
+                        <local:EntryRenderer
+                            x:Name="SearchEntry"
+                            Placeholder="Поиск"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Center"
+                            IsEnabled="False"
+                            TextChanged="SearchRequests"
+                            Margin="20, 12, 20, 0"/>
+
+                    </Grid>
+
+                    <Grid Grid.Column="2">
+
+                        <local:ImageRenderer
+                            x:Name="ClearImage"
+                            Source="Resourses/clear.png"
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            Margin="5, 0, 30, 0">
+
+                            <local:ImageRenderer.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="Clear_Tapped"/>
+                            </local:ImageRenderer.GestureRecognizers>
+
+                        </local:ImageRenderer>
+
+                    </Grid>
+
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Row="2">
+
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+
+                    <ListView
+                        x:Name="NotifList"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Fill"
+                        SeparatorVisibility="None"
+                        IsPullToRefreshEnabled="True"
+                        ItemTapped="NotifList_ItemTapped"
+                        Refreshing="NotifList_Refreshing"
+                        Margin="20, 30, 20, 0"
+                        HasUnevenRows="True"/>
+
+                </StackLayout>
+
+            </Grid>
+
+        </Grid>
+
+    </ContentPage.Content>
+    
+</ContentPage>

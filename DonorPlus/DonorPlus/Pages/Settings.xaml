@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:renderers="clr-namespace:DonorPlus.Renderers"
+             x:Class="DonorPlus.Settings">
+    
+    <!--<ContentPage.Content>
+
+        <Grid RowSpacing="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+
+                    <Label
+                        x:Name="SettingLabel"
+                        Text="Настройки"
+                        FontSize="Medium"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        FontAttributes="Bold">
+
+                    </Label>
+
+                </StackLayout>
+
+            </Grid>
+
+            <Grid Grid.Row="1">
+
+                <ListView
+                    x:Name="SettingsList"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    SeparatorVisibility="Default"
+                    ItemTapped="SettingsList_ItemTapped"
+                    SeparatorColor="LightGray"
+                    RowHeight="40">
+
+                </ListView>
+                
+            </Grid>
+
+        </Grid>
+        
+    </ContentPage.Content>-->
+
+    <ContentPage.Content>
+
+        <StackLayout>
+
+            <!--<StackLayout
+                x:Name="ActivityStack"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                IsVisible="False">
+
+                <renderers:ActivityIndicatorRenderer
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    x:Name="Activity"
+                    IsEnabled="False"
+                    IsVisible="False"
+                    IsRunning="False"/>
+
+            </StackLayout>-->
+
+            <Grid RowSpacing="-1" x:Name="MainGrid">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+
+                    <Grid RowSpacing="-1">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+
+                            <StackLayout
+                            x:Name="MenuStack">
+                            </StackLayout>
+
+                        </Grid>
+
+                        <Grid Grid.Row="1">
+
+                            <StackLayout
+                            x:Name="ProfileStack">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                    x:Name="AppearenceButton"
+                                    Tapped="GoToAppearence"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+
+                        </Grid>
+
+                        <Grid Grid.Row="2">
+
+                            <StackLayout
+                            x:Name="MapsStack">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                    x:Name="NotifSettingsButton"
+                                    Tapped="GoToNotifSettings"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+
+                        </Grid>
+
+                        <Grid
+                        Grid.Row="3">
+
+                            <StackLayout
+                            x:Name="InfoStack">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                    x:Name="ExitButton"
+                                    Tapped="ExitButton_Tapped"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+
+                        </Grid>
+
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                </Grid>
+
+            </Grid>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+
+</ContentPage>

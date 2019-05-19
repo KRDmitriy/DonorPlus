@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DonorPlusLib.BloodData">
+    <Position X="1.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>BloodData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DonorPlusLib.Client">
+    <Position X="6.25" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>gAACAIgAICAAACAkABEEAAQQBAAFAgAiAQAAZggAAgA=</HashCode>
+      <FileName>Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DonorPlusLib.Connect">
+    <Position X="9.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Connect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DonorPlusLib.Constants">
+    <Position X="16.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAABAAABAAAEAACBAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Constants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DonorPlusLib.Contacts">
+    <Position X="11.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Contacts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DonorPlusLib.Message">
+    <Position X="14" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAACAAAAwA=</HashCode>
+      <FileName>Message.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DonorPlusLib.MessageLog">
+    <Position X="14" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MessageLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DonorPlusLib.MyOwnSecurity">
+    <Position X="18.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>MyOwnSecurity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DonorPlusLib.Photo">
+    <Position X="5.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Photo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DonorPlusLib.Registration">
+    <Position X="7.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Registration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DonorPlusLib.Request">
+    <Position X="9.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAQgAAAgAAUAAAAAAAYAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Request.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DonorPlusLib.Requests">
+    <Position X="9.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAACAA=</HashCode>
+      <FileName>Requests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DonorPlusLib.ResultObj">
+    <Position X="9.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hQABAAAAAAAAAAAAAAAAAAAQAAAAgBAAAAAAARAAAAA=</HashCode>
+      <FileName>ResultObj.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DonorPlusLib.Table">
+    <Position X="18.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAEAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Table.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DonorPlusLib.Users">
+    <Position X="16.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAIEAAAA=</HashCode>
+      <FileName>Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DonorPlusLib.Login">
+    <Position X="3.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Login.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

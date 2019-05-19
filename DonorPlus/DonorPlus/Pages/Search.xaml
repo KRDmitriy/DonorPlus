@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DonorPlus.Renderers"
+             xmlns:effects="clr-namespace:DonorPlus.Effects"
+             xmlns:models="clr-namespace:DonorPlus.Models"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="DonorPlus.Search">
+
+    <ContentPage.Content>
+
+        <Grid RowSpacing="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+
+                <Grid RowSpacing="0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+
+                        <StackLayout
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+
+                            <Label
+                                x:Name="SearchLabel"
+                                Text="Поиск"
+                                FontSize="Medium"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"
+                                FontAttributes="Bold">
+
+                            </Label>
+
+                        </StackLayout>
+
+                    </Grid>
+
+                    <Grid Grid.Row="2">
+
+                        <Grid ColumnSpacing="10">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="60"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Grid.Column="0">
+
+                                <local:ImageRenderer
+                                    x:Name="SearchImage"
+                                    Source="Resourses/search.png"
+                                    HorizontalOptions="StartAndExpand"
+                                    VerticalOptions="FillAndExpand"
+                                    Margin="30, 0, 5, 0"/>
+
+                            </Grid>
+
+                            <Grid Grid.Column="1">
+                                
+                                <local:EntryRenderer
+                                    x:Name="SearchEntry"
+                                    Placeholder="Поиск друзей"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand"
+                                    HorizontalTextAlignment="Center"
+                                    IsEnabled="False"
+                                    TextChanged="SearchUsers"
+                                    Margin="20, 12, 20, 0"/>
+                                
+                            </Grid>
+
+                            <Grid Grid.Column="2">
+
+                                <local:ImageRenderer
+                                    x:Name="ClearImage"
+                                    Source="Resourses/clear.png"
+                                    HorizontalOptions="StartAndExpand"
+                                    VerticalOptions="FillAndExpand"
+                                    Margin="5, 0, 30, 0">
+
+                                    <local:ImageRenderer.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Tapped="Clear_Tapped"/>
+                                    </local:ImageRenderer.GestureRecognizers>
+
+                                </local:ImageRenderer>
+
+                            </Grid>
+
+                        </Grid>
+
+                    </Grid>
+
+                </Grid>
+                
+            </Grid>
+
+            <Grid Grid.Row="1">
+
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+
+                    <ListView
+                        x:Name="ResultList"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Fill"
+                        SeparatorVisibility="None"
+                        ItemTapped="ResultList_ItemTapped"
+                        IsPullToRefreshEnabled="True"
+                        Refreshing="ResultList_Refreshing"
+                        Margin="20, 30, 20, 0"
+                        RowHeight="60"/>
+
+                </StackLayout>
+
+            </Grid>
+            
+        </Grid>
+        
+    </ContentPage.Content>
+    
+</ContentPage>
