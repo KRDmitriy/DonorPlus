@@ -44,7 +44,6 @@ namespace DonorPlus
         private async void Foggot_Clicked(object sender, EventArgs e)
         {
             Foggot.IsEnabled = false;
-            //ActivityInd.Start();
             IsBusy = true;
             CheckParams();
 
@@ -69,7 +68,6 @@ namespace DonorPlus
             }
 
             IsBusy = false;
-            //ActivityInd.Stop();
             Foggot.IsEnabled = true;
         }
 
@@ -126,7 +124,6 @@ namespace DonorPlus
                                 App.Current.Properties.Clear();
 
                                 App.Current.Properties.Add("user", result.User.Id);
-                                //App.Current.Properties.Add("photo", result.User.Photo);
 
                                 if (Navigation.NavigationStack.Count == 1)
                                 {
@@ -163,10 +160,8 @@ namespace DonorPlus
         private async void RegButton_Clicked(object sender, EventArgs e)
         {
             RegButton.IsEnabled = false;
-            //ActivityInd.Start();
             IsBusy = true;
             await Navigation.PushAsync(new RegistrationPage(false));
-            //ActivityInd.Stop();
             IsBusy = false;
             RegButton.IsEnabled = true;
         }

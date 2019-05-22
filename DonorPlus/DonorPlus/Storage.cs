@@ -1,6 +1,6 @@
-﻿using Plugin.Settings;
+﻿using DonorPlusLib;
+using Plugin.Settings;
 using Xamarin.Forms;
-using DonorPlusLib;
 
 namespace DonorPlus
 {
@@ -41,24 +41,24 @@ namespace DonorPlus
         public static Client temporaryData { get; set; }
 
         public static string Email = "donorplus.help@gmail.com";
-        
+
         public static string MailPasswd = "sDonor!12";
 
         public static void SetDarkTheme()
         {
-            Storage.IsDarkTheme = true;
-            Storage.BackColor = Color.Black;
-            Storage.TextColor = Color.White;
-            Storage.HelpColor = Color.FromRgb(0, 150, 255); //Color.Orange;
+            IsDarkTheme = true;
+            BackColor = Color.Black;
+            TextColor = Color.White;
+            HelpColor = Color.FromRgb(0, 150, 255); //Color.Orange;
             CrossSettings.Current.AddOrUpdateValue("IsDarkTheme", true);
         }
 
         public static void SetLightTheme()
         {
-            Storage.IsDarkTheme = false;
-            Storage.BackColor = Color.White;
-            Storage.TextColor = Color.Black;
-            Storage.HelpColor = Color.FromRgb(0, 150, 255); //Color.FromRgb(0, 0, 200);
+            IsDarkTheme = false;
+            BackColor = Color.White;
+            TextColor = Color.Black;
+            HelpColor = Color.FromRgb(0, 150, 255); //Color.FromRgb(0, 0, 200);
             CrossSettings.Current.AddOrUpdateValue("IsDarkTheme", false);
         }
     }

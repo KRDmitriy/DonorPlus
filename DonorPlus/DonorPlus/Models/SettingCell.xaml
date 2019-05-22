@@ -45,9 +45,9 @@
                 VerticalOptions="Center"/>
 
             </Grid>
-            
+
         </Grid>
 
     </ViewCell.View>
-    
+
 </ViewCell>

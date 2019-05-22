@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:DonorPlus.Renderers"
              NavigationPage.HasNavigationBar="False"
              x:Class="DonorPlus.Notifications">
-    
+
     <ContentPage.Content>
 
         <Grid RowSpacing="0">
@@ -122,5 +122,5 @@
         </Grid>
 
     </ContentPage.Content>
-    
+
 </ContentPage>

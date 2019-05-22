@@ -5,20 +5,20 @@
              xmlns:local="clr-namespace:DonorPlus.Helpers" 
              xmlns:partials="clr-namespace:DonorPlus.Views.Partials" 
              xmlns:controls="clr-namespace:DonorPlus.Controls">
-    
+
     <ContentPage.Resources>
-        
+
         <ResourceDictionary>
-            
+
             <local:ChatTemplateSelector x:Key="MessageTemplateSelector"/>
-            
+
         </ResourceDictionary>
-        
+
     </ContentPage.Resources>
-    
+
     <Grid RowSpacing="0" 
            ColumnSpacing="0">
-         
+
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="1" />
@@ -38,7 +38,7 @@
             SeparatorColor="Transparent"
             ItemAppearingCommand="{Binding MessageAppearingCommand}"
             ItemDisappearingCommand="{Binding MessageDisappearingCommand}"/>
-         
+
         <Frame
             HorizontalOptions="EndAndExpand" 
             Margin="0,0,2,15"
@@ -50,7 +50,7 @@
             Padding="1"
             BackgroundColor="White"   
             IsVisible="{Binding ShowScrollTap,Mode=TwoWay}">
-            
+
             <StackLayout Spacing="3">
 
                 <Label
@@ -59,33 +59,33 @@
                     IsVisible="{Binding PendingMessageCountVisible}"
                     VerticalTextAlignment="Center"
                     TextColor="{DynamicResource primary}"/>
-                
+
                 <Image
                     Source="ic_scrolldown"
                     WidthRequest="30"
                     HeightRequest="30"
                     VerticalOptions="CenterAndExpand"/>
-                        
+
             </StackLayout>
-            
+
             <Frame.GestureRecognizers>
                 <TapGestureRecognizer Tapped="ScrollTap"/>
             </Frame.GestureRecognizers>
-            
-         </Frame>
-        
+
+        </Frame>
+
         <BoxView
             HorizontalOptions="FillAndExpand"
             HeightRequest="1"
             BackgroundColor="LightGray"
             Grid.Row="1"/>
-        
+
         <partials:ChatInputBarView
             Grid.Row="2"
             Margin="0,0,0,0"
             x:Name="chatInput"
             BackgroundColor="LightGray"/>
-        
+
     </Grid>
-    
+
 </ContentPage>

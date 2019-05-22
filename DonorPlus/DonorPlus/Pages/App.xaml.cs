@@ -1,9 +1,9 @@
-﻿using System.Threading.Tasks;
-using DonorPlusLib;
+﻿using DonorPlusLib;
 using Plugin.Connectivity;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
 using Plugin.Settings;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -59,14 +59,7 @@ namespace DonorPlus
                     {
                         ResultObj result = await Task.Run(() => Users.GetInfoAboutUser((int)id));
                         Storage.User = result.User;
-                        //if (Current.Properties.TryGetValue("photo", out object imageData))
-                        //{
-                        //    Storage.User.AddPhoto((byte[])imageData);
-                        //}
-                        //else
-                        //{
-                            Storage.User.AddPhoto(Photo.Get(Storage.User.Id).Image);
-                        //}
+                        Storage.User.AddPhoto(Photo.Get(Storage.User.Id).Image);
                         ResultObj blood = BloodData.Get(result.User.Id);
                         Storage.User.AddBloodGroup(blood.BloodGroup);
                         Storage.User.AddRFactor(blood.RFactor);

@@ -1,6 +1,6 @@
-﻿using System;
+﻿using DonorPlus.Models;
+using System;
 using System.Collections.Generic;
-using DonorPlus.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,7 +9,7 @@ namespace DonorPlus
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class News : ContentPage
     {
-        List<NewsFrameModel> news = new List<NewsFrameModel>();
+        private List<NewsFrameModel> news = new List<NewsFrameModel>();
 
         public News()
         {

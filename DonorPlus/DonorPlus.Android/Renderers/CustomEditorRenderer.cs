@@ -1,9 +1,8 @@
-﻿using System.ComponentModel;
-using Android.Content;
-using Android.Content.Res;
+﻿using Android.Content;
 using Android.Graphics.Drawables;
 using DonorPlus.Controls;
 using DonorPlus.Droid.Renderers;
+using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 

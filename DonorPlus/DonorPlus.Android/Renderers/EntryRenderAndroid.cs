@@ -21,12 +21,19 @@ namespace DonorPlus.Droid.Renderers
             if (Control != null)
             {
                 Control.SetPadding(15, 0, 0, 15);
-                if (Control == null || e.NewElement == null) return;
+                if (Control == null || e.NewElement == null)
+                {
+                    return;
+                }
 
                 if (Build.VERSION.SdkInt >= BuildVersionCodes.Lollipop)
+                {
                     Control.BackgroundTintList = ColorStateList.ValueOf(Android.Graphics.Color.White);
+                }
                 else
+                {
                     Control.Background.SetColorFilter(Android.Graphics.Color.White, PorterDuff.Mode.SrcAtop);
+                }
             }
         }
     }

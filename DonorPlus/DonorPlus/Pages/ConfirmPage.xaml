@@ -4,8 +4,8 @@
              xmlns:Local="clr-namespace:DonorPlus.Renderers"
              x:Class="DonorPlus.ConfirmPage"
              NavigationPage.HasNavigationBar="False">
-    
-  <ContentPage.Content>
+
+    <ContentPage.Content>
 
         <Grid RowSpacing="0">
 
@@ -53,7 +53,7 @@
 
                     <Grid Grid.Row="2"
                           Margin="0, 20, 0, 0">
-                        
+
                         <Button
                             x:Name="ConfirmButton"
                             Text="Подвердить"
@@ -64,17 +64,17 @@
                             BorderColor="WhiteSmoke"
                             CornerRadius="20"
                             Clicked="ConfirmButton_Clicked"/>
-                        
+
                     </Grid>
 
                 </Grid>
-                    
+
             </Grid>
 
             <Grid Grid.Row="2"/>
 
         </Grid>
-      
-  </ContentPage.Content>
-    
+
+    </ContentPage.Content>
+
 </ContentPage>

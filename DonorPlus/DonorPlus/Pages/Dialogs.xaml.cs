@@ -24,7 +24,6 @@ namespace DonorPlus
             DialogList.ItemTemplate = new DataTemplate(typeof(UserCell));
 
             SetColors();
-            //Indicator.Start();
             DialogList_Refreshing(this, new System.EventArgs());
             App.DataAlreadyLoaded += GetData;
             Profile.FriendAddedEvent += SetDialogs;
@@ -102,7 +101,6 @@ namespace DonorPlus
             ResultObj result = await Task.Run(() => Contacts.GetContacts(Storage.User.Id));
             contacts = result.Contacts;
             SetDialogs();
-            //Indicator.Stop();
             DialogList.IsVisible = true;
             return true;
         }
@@ -114,7 +112,6 @@ namespace DonorPlus
                 ResultObj result = await Task.Run(() => Contacts.GetContacts(Storage.User.Id));
                 contacts = result.Contacts;
                 SetDialogs();
-                //Indicator.Stop();
                 DialogList.IsVisible = true;
             }
             DialogList.IsRefreshing = false;

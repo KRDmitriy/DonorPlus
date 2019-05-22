@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:DonorPlus.Renderers"
              xmlns:controls="clr-namespace:DonorPlus.Controls"
              x:Class="DonorPlus.RequestPage">
-    
+
     <ContentPage.Content>
 
         <Grid RowSpacing="0">
@@ -98,14 +98,6 @@
                                     HorizontalOptions="FillAndExpand"
                                     VerticalOptions="FillAndExpand">
 
-                                    <!--<local:EntryRenderer
-                                        x:Name="BloodGroupEntry"
-                                        Placeholder="Введите группу крови"
-                                        Margin="15, 0, 0, 0"
-                                        HorizontalOptions="FillAndExpand"
-                                        VerticalOptions="FillAndExpand"
-                                        HorizontalTextAlignment="Start"/>-->
-
                                     <Picker x:Name="BloodGroupEntry"
                                             Margin="15, 0, 0, 0"
                                             HorizontalOptions="FillAndExpand"
@@ -175,14 +167,6 @@
                                     x:Name="RFactorEntryStack"
                                     HorizontalOptions="FillAndExpand"
                                     VerticalOptions="FillAndExpand">
-
-                                    <!--<local:EntryRenderer
-                                        x:Name="RFactorEntry"
-                                        Placeholder="Введите резус-фактор"
-                                        Margin="15, 0, 0, 0"
-                                        HorizontalOptions="FillAndExpand"
-                                        VerticalOptions="FillAndExpand"
-                                        HorizontalTextAlignment="Start"/>-->
 
                                     <Picker x:Name="RFactorEntry"
                                             Margin="15, 0, 0, 0"
@@ -351,5 +335,5 @@
         </Grid>
 
     </ContentPage.Content>
-    
+
 </ContentPage>

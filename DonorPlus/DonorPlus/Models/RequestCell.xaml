@@ -3,14 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:DonorPlus.Controls"
              x:Class="DonorPlus.Models.RequestCell">
-    
+
     <ViewCell.View>
 
         <Frame x:Name="MainFrame"
                CornerRadius="20"
                Padding="0"
                Margin="5, 5, 15, 5">
-            
+
             <Grid RowSpacing="0">
 
                 <Grid.RowDefinitions>
@@ -173,18 +173,10 @@
                                IsVisible="False"/>
 
                     </Grid>
-                    
+
                 </Frame>
 
                 <Grid Grid.Row="1">
-
-                    <!--<controls:ExtendedEditorControl
-                        x:Name="Description"
-                        Text="{Binding Path=Description}"
-                        IsReadOnly="True"
-                        Margin="15, 0, 0, 0"
-                        HorizontalOptions="FillAndExpand"
-                        VerticalOptions="FillAndExpand"/>-->
 
                     <Label x:Name="Description"
                            Text="{Binding Path=Description}"
@@ -197,9 +189,9 @@
                 </Grid>
 
             </Grid>
-            
+
         </Frame>
 
     </ViewCell.View>
-    
+
 </ViewCell>

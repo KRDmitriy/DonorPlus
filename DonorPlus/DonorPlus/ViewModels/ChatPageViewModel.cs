@@ -22,13 +22,13 @@ namespace DonorPlus.ViewModels
         public ICommand MessageAppearingCommand { get; set; }
         public ICommand MessageDisappearingCommand { get; set; }
 
-        private string[] mes = 
+        private string[] mes =
         {
             "Привет",
             "Добро пожаловать!",
             "Здравствуйте!",
             "Как Ваши дела?",
-            "Я всего лишь бот, на что вы рассчитываете?", 
+            "Я всего лишь бот, на что вы рассчитываете?",
             "У Вас проблемы? Пишите 'donorplus.help@gmail.com'",
             "Вы приносите пользу обществу! Я Вами горжусь!!!",
             "У меня всё хорошо! А у Вас?",

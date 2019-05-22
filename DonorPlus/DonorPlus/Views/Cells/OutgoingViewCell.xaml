@@ -2,7 +2,8 @@
 <ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
           x:Class="DonorPlus.Views.Cells.OutgoingViewCell">
-        <Frame BackgroundColor="LightBlue"
+
+    <Frame BackgroundColor="LightBlue"
                Padding="10"
                Rotation="180"
                HorizontalOptions="End"
@@ -10,6 +11,7 @@
                CornerRadius="5"
                HasShadow="false"
                Margin="10,10,80,10">
+
         <StackLayout>
             <Label Text="{Binding Text}"/>
             <StackLayout
@@ -18,5 +20,6 @@
                 <Label Text="{Binding Date}" FontSize="7"/>
             </StackLayout>
         </StackLayout>
+
     </Frame>
 </ViewCell>

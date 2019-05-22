@@ -1,13 +1,13 @@
-﻿using Xamarin.Forms;
+﻿using DonorPlus.Effects;
 using DonorPlus.Renderers;
-using DonorPlus.Effects;
+using Xamarin.Forms;
 
 namespace DonorPlus.Models
 {
     public class MenuFrameModel : Frame
     {
-        Label label = new Label();
-        ImageRenderer image;
+        private Label label = new Label();
+        private ImageRenderer image;
 
         public MenuFrameModel(string imageSource, string text, int size)
         {
@@ -79,7 +79,7 @@ namespace DonorPlus.Models
             {
                 label.HorizontalOptions = LayoutOptions.FillAndExpand;
             }
-            
+
 
             StackLayout layout = new StackLayout() { Children = { image, label } };
             layout.Orientation = StackOrientation.Horizontal;

@@ -49,9 +49,12 @@ namespace DonorPlus
 
         private bool CheckData()
         {
-            if (BloodGroupEntry.SelectedItem.ToString() == "Выберите ..." || 
+            if (BloodGroupEntry.SelectedItem.ToString() == "Выберите ..." ||
                 RFactorEntry.SelectedItem.ToString() == "Выберите ...")
+            {
                 return false;
+            }
+
             return !(string.IsNullOrWhiteSpace(BloodGroupEntry.SelectedItem.ToString()) ||
                 string.IsNullOrWhiteSpace(RFactorEntry.SelectedItem.ToString()));
         }

@@ -4,10 +4,10 @@ namespace DonorPlus.Controls
 {
     public class ExtendedEditorControl : Editor
     {
-        public new static BindableProperty PlaceholderProperty
+        public static new BindableProperty PlaceholderProperty
           = BindableProperty.Create(nameof(Placeholder), typeof(string), typeof(ExtendedEditorControl));
 
-        public new static BindableProperty PlaceholderColorProperty
+        public static new BindableProperty PlaceholderColorProperty
            = BindableProperty.Create(nameof(PlaceholderColor), typeof(Color), typeof(ExtendedEditorControl), Color.LightGray);
 
         public static BindableProperty HasRoundedCornerProperty

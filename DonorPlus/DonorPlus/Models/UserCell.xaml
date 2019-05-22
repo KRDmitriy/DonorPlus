@@ -4,7 +4,7 @@
              xmlns:renderers="clr-namespace:DonorPlus.Renderers"
              xmlns:effects="clr-namespace:DonorPlus.Effects"
              x:Class="DonorPlus.Models.UserCell">
-    
+
     <ViewCell.View>
 
         <Frame
@@ -101,5 +101,5 @@
         </Frame>
 
     </ViewCell.View>
-    
+
 </ViewCell>

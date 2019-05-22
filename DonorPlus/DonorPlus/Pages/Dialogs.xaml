@@ -49,14 +49,6 @@
 
                 <StackLayout>
 
-                    <!--<local:ActivityIndicatorRenderer
-                        x:Name="Indicator"
-                        HorizontalOptions="FillAndExpand"
-                        VerticalOptions="FillAndExpand"
-                        Color="Blue"
-                        HeightRequest="50"
-                        WidthRequest="50"/>-->
-
                     <ListView
                         x:Name="DialogList"
                         HorizontalOptions="FillAndExpand"

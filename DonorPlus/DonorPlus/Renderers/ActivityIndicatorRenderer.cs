@@ -31,7 +31,7 @@ namespace DonorPlus.Renderers
         public void SetColors()
         {
             Color = Storage.HelpColor;
-            BackgroundColor = Storage.BackColor;  
+            BackgroundColor = Storage.BackColor;
         }
     }
 }

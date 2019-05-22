@@ -279,13 +279,13 @@
                                             HorizontalOptions="FillAndExpand"
                                             VerticalOptions="FillAndExpand"
                                             HorizontalTextAlignment="Start">
-                                            
+
                                             <Label.GestureRecognizers>
 
                                                 <TapGestureRecognizer Tapped="Link_Tapped"/>
 
                                             </Label.GestureRecognizers>
-                                            
+
                                         </Label>
 
                                     </Grid>

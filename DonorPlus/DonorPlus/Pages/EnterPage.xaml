@@ -6,7 +6,7 @@
              NavigationPage.HasNavigationBar="False">
 
     <ContentPage.Content>
-        
+
         <Grid RowSpacing="0" x:Name="MainGrid">
 
             <Grid.RowDefinitions>
@@ -15,21 +15,8 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0">
+            <Grid Grid.Row="0"/>
 
-                <!--<local:ActivityIndicatorRenderer
-                    x:Name="ActivityInd"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Color="Blue"
-                    HeightRequest="50"
-                    WidthRequest="50"
-                    IsEnabled="False"
-                    IsVisible="False"
-                    IsRunning="False"/>-->
-
-            </Grid>
-            
             <Grid Grid.Row="1">
 
                 <Grid RowSpacing="0">
@@ -151,5 +138,5 @@
         </Grid>
 
     </ContentPage.Content>
-    
+
 </ContentPage>

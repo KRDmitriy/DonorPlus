@@ -13,10 +13,10 @@ namespace DonorPlus.Controls
 
         public ExtendedListView(ListViewCachingStrategy cachingStrategy) : base(cachingStrategy)
         {
-            this.ItemSelected += OnItemSelected;
-            this.ItemTapped += OnItemTapped;
-            this.ItemAppearing += OnItemAppearing;
-            this.ItemDisappearing += OnItemDisappering;
+            ItemSelected += OnItemSelected;
+            ItemTapped += OnItemTapped;
+            ItemAppearing += OnItemAppearing;
+            ItemDisappearing += OnItemDisappering;
         }
 
         public static readonly BindableProperty TappedCommandProperty =
@@ -24,8 +24,8 @@ namespace DonorPlus.Controls
 
         public ICommand TappedCommand
         {
-            get { return (ICommand)GetValue(TappedCommandProperty); }
-            set { SetValue(TappedCommandProperty, value); }
+            get => (ICommand)GetValue(TappedCommandProperty);
+            set => SetValue(TappedCommandProperty, value);
         }
 
         public static readonly BindableProperty ItemAppearingCommandProperty =
@@ -33,8 +33,8 @@ namespace DonorPlus.Controls
 
         public ICommand ItemAppearingCommand
         {
-            get { return (ICommand)GetValue(ItemAppearingCommandProperty); }
-            set { SetValue(ItemAppearingCommandProperty, value); }
+            get => (ICommand)GetValue(ItemAppearingCommandProperty);
+            set => SetValue(ItemAppearingCommandProperty, value);
         }
 
         public static readonly BindableProperty ItemDisappearingCommandProperty =
@@ -43,15 +43,19 @@ namespace DonorPlus.Controls
 
         public ICommand ItemDisappearingCommand
         {
-            get { return (ICommand)GetValue(ItemDisappearingCommandProperty); }
-            set { SetValue(ItemDisappearingCommandProperty, value); }
+            get => (ICommand)GetValue(ItemDisappearingCommandProperty);
+            set => SetValue(ItemDisappearingCommandProperty, value);
         }
 
 
         private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var listView = (ExtendedListView)sender;
-            if (e == null) return;
+            ExtendedListView listView = (ExtendedListView)sender;
+            if (e == null)
+            {
+                return;
+            }
+
             listView.SelectedItem = null;
 
         }
@@ -89,7 +93,7 @@ namespace DonorPlus.Controls
                 {
                     if (ItemsSource != null && ItemsSource.Cast<object>().Count() > 0)
                     {
-                        var msg = ItemsSource.Cast<object>().FirstOrDefault();
+                        object msg = ItemsSource.Cast<object>().FirstOrDefault();
                         if (msg != null)
                         {
                             ScrollTo(msg, ScrollToPosition.Start, false);
@@ -113,7 +117,7 @@ namespace DonorPlus.Controls
                 {
                     if (ItemsSource != null && ItemsSource.Cast<object>().Count() > 0)
                     {
-                        var msg = ItemsSource.Cast<object>().LastOrDefault();
+                        object msg = ItemsSource.Cast<object>().LastOrDefault();
                         if (msg != null)
                         {
                             ScrollTo(msg, ScrollToPosition.End, false);

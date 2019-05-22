@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using DonorPlus.ViewModels;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace DonorPlus.Views.Cells
 {

@@ -43,13 +43,23 @@ namespace DonorPlus
                 PhoneEntry.Text = Storage.User.Phone;
                 PhotoButton.Text = "Изменить фото";
                 if (Storage.User.BloodGroup != "")
+                {
                     BloodGroupEntry.SelectedItem = Storage.User.BloodGroup;
+                }
                 else
+                {
                     BloodGroupEntry.SelectedItem = "Нет данных";
+                }
+
                 if (Storage.User.RFactor != "")
+                {
                     RFactorEntry.SelectedItem = Storage.User.RFactor;
+                }
                 else
+                {
                     RFactorEntry.SelectedItem = "Нет данных";
+                }
+
                 if (Storage.User.Photo != null)
                 {
                     imageData = Storage.User.Photo;
@@ -169,7 +179,7 @@ namespace DonorPlus
 
                 Photo.Effects.Clear();
                 Photo.Source = ImageSource.FromStream(() => file.GetStream());
-                
+
                 imageData = new BinaryReader
                     (file.GetStream()).ReadBytes((int)(new FileInfo(filePath).Length));
             }
@@ -251,10 +261,16 @@ namespace DonorPlus
                     imageData);
                 if (BloodGroupEntry.SelectedItem.ToString() != "Нет данных" &&
                 !string.IsNullOrWhiteSpace(BloodGroupEntry.SelectedItem.ToString()))
+                {
                     oldClient.AddBloodGroup(BloodGroupEntry.SelectedItem.ToString());
+                }
+
                 if (RFactorEntry.SelectedItem.ToString() != "Нет данных" &&
                     !string.IsNullOrWhiteSpace(RFactorEntry.SelectedItem.ToString()))
+                {
                     oldClient.AddRFactor(RFactorEntry.SelectedItem.ToString());
+                }
+
                 return oldClient;
             }
 
@@ -269,14 +285,24 @@ namespace DonorPlus
                    imageData);
             if (BloodGroupEntry.SelectedItem.ToString() != "Нет данных" &&
                 !string.IsNullOrWhiteSpace(BloodGroupEntry.SelectedItem.ToString()))
+            {
                 newClient.AddBloodGroup("");
+            }
             else
+            {
                 newClient.AddBloodGroup(BloodGroupEntry.SelectedItem.ToString());
+            }
+
             if (RFactorEntry.SelectedItem.ToString() != "Нет данных" &&
                 !string.IsNullOrWhiteSpace(RFactorEntry.SelectedItem.ToString()))
+            {
                 newClient.AddRFactor("");
+            }
             else
+            {
                 newClient.AddRFactor(RFactorEntry.SelectedItem.ToString());
+            }
+
             return newClient;
         }
 

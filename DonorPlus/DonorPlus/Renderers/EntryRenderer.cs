@@ -1,5 +1,5 @@
-﻿using Xamarin.Forms;
-using System.Runtime.CompilerServices;
+﻿using System.Runtime.CompilerServices;
+using Xamarin.Forms;
 
 [assembly: InternalsVisibleTo("DonorPlus.Android")]
 namespace DonorPlus.Renderers

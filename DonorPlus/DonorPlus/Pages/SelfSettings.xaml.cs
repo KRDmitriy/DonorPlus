@@ -33,7 +33,7 @@ namespace DonorPlus
 
         private void PrivateSwitch_Toggled(object sender, ToggledEventArgs e)
         {
-            //
+            //В разработке
         }
     }
 }

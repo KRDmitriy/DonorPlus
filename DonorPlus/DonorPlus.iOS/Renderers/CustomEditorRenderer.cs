@@ -1,8 +1,8 @@
-﻿using System.ComponentModel;
-using CoreGraphics;
+﻿using CoreGraphics;
 using DonorPlus.Controls;
 using DonorPlus.iOS.Renderers;
 using Foundation;
+using System.ComponentModel;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;

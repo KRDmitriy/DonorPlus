@@ -1,16 +1,16 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using DonorPlus.Renderers;
 using DonorPlusLib;
-using DonorPlus.Renderers;
-using Xamarin.Forms.Xaml;
+using System;
 using System.Threading.Tasks;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace DonorPlus
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ConfirmPage : ContentPage
     {
-        ActivityIndicatorRenderer activityIndicator = new ActivityIndicatorRenderer();
+        private ActivityIndicatorRenderer activityIndicator = new ActivityIndicatorRenderer();
 
         public ConfirmPage()
         {

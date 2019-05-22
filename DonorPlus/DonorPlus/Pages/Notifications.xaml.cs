@@ -173,7 +173,7 @@ namespace DonorPlus
                             }
                         }
                         break;
-                    }                    
+                    }
                 }
             }
             else

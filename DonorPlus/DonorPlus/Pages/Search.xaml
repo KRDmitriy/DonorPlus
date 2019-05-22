@@ -70,7 +70,7 @@
                             </Grid>
 
                             <Grid Grid.Column="1">
-                                
+
                                 <local:EntryRenderer
                                     x:Name="SearchEntry"
                                     Placeholder="Поиск друзей"
@@ -80,7 +80,7 @@
                                     IsEnabled="False"
                                     TextChanged="SearchUsers"
                                     Margin="20, 12, 20, 0"/>
-                                
+
                             </Grid>
 
                             <Grid Grid.Column="2">
@@ -106,7 +106,7 @@
                     </Grid>
 
                 </Grid>
-                
+
             </Grid>
 
             <Grid Grid.Row="1">
@@ -129,9 +129,9 @@
                 </StackLayout>
 
             </Grid>
-            
+
         </Grid>
-        
+
     </ContentPage.Content>
-    
+
 </ContentPage>

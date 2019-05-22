@@ -1,5 +1,5 @@
-﻿using System;
-using DonorPlus.ViewModels;
+﻿using DonorPlus.ViewModels;
+using System;
 using Xamarin.Forms;
 
 namespace DonorPlus.Views.Partials
