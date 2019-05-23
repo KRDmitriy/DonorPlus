@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Threading.Tasks;
-using DonorPlus.Models;
+﻿using DonorPlus.Models;
 using DonorPlus.Views;
 using DonorPlusLib;
 using Plugin.Messaging;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -40,28 +40,49 @@ namespace DonorPlus
             EditImage.IsEnabled = true;
         }
 
-        public void AddToFriends(object sender, EventArgs e)
+        public async void AddToFriends(object sender, EventArgs e)
         {
-            Contacts.Add(Storage.User.Id, Storage.Friend.Id);
-            PersonalInfo.IsVisible = true;
-            FriendAddedEvent?.Invoke();
-        }
-
-        private void Call_Tapped(object sender, EventArgs e)
-        {
-            IPhoneCallTask phoneDialer = CrossMessaging.Current.PhoneDialer;
-            if (phoneDialer.CanMakePhoneCall)
+            try
             {
-                phoneDialer.MakePhoneCall(client.Phone);
+                Contacts.Add(Storage.User.Id, Storage.Friend.Id);
+                PersonalInfo.IsVisible = true;
+                FriendAddedEvent?.Invoke();
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Ошибка", ex.Message, "OK");
             }
         }
 
-        private void SendEmail_Tapped(object sender, EventArgs e)
+        private async void Call_Tapped(object sender, EventArgs e)
         {
-            IEmailTask emailMessenger = CrossMessaging.Current.EmailMessenger;
-            if (emailMessenger.CanSendEmail)
+            try
             {
-                emailMessenger.SendEmail(client.Email, "", "");
+                IPhoneCallTask phoneDialer = CrossMessaging.Current.PhoneDialer;
+                if (phoneDialer.CanMakePhoneCall)
+                {
+                    phoneDialer.MakePhoneCall(client.Phone);
+                }
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Ошибка", ex.Message, "OK");
+            }
+        }
+
+        private async void SendEmail_Tapped(object sender, EventArgs e)
+        {
+            try
+            {
+                IEmailTask emailMessenger = CrossMessaging.Current.EmailMessenger;
+                if (emailMessenger.CanSendEmail)
+                {
+                    emailMessenger.SendEmail(client.Email, "", "");
+                }
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Ошибка", ex.Message, "OK");
             }
         }
 
@@ -194,6 +215,6 @@ namespace DonorPlus
         private async void MyHistoryButton_Clicked(object sender, EventArgs e)
         {
             await DisplayAlert("Внимание!", "В данный момент журнал не доступен!", "OK");
-        } 
+        }
     }
 }

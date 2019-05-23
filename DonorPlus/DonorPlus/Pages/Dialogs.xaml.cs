@@ -76,24 +76,31 @@ namespace DonorPlus
 
         private async void DialogList_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            DialogList.IsEnabled = false;
-            if (e.Item != null)
+            try
             {
-                UserModel userView = (UserModel)e.Item;
-                int id = userView.ModeID;
-                if (id != -1)
+                DialogList.IsEnabled = false;
+                if (e.Item != null)
                 {
-                    Storage.Friend = users[id];
-                    await Navigation.PushModalAsync(new ChatPage());
+                    UserModel userView = (UserModel)e.Item;
+                    int id = userView.ModeID;
+                    if (id != -1)
+                    {
+                        Storage.Friend = users[id];
+                        await Navigation.PushModalAsync(new ChatPage());
+                    }
+                    else
+                    {
+                        Storage.IsChatBot = true;
+                        await Navigation.PushModalAsync(new ChatPage());
+                    }
                 }
-                else
-                {
-                    Storage.IsChatBot = true;
-                    await Navigation.PushModalAsync(new ChatPage());
-                }
+                ((ListView)sender).SelectedItem = null;
+                DialogList.IsEnabled = true;
             }
-            ((ListView)sender).SelectedItem = null;
-            DialogList.IsEnabled = true;
+            catch (System.Exception ex)
+            {
+                await DisplayAlert("Ошибка", ex.Message, "OK");
+            }
         }
 
         public async Task<bool> GetData()
@@ -107,14 +114,21 @@ namespace DonorPlus
 
         private async void DialogList_Refreshing(object sender, System.EventArgs e)
         {
-            if (Storage.DataLoaded)
+            try
             {
-                ResultObj result = await Task.Run(() => Contacts.GetContacts(Storage.User.Id));
-                contacts = result.Contacts;
-                SetDialogs();
-                DialogList.IsVisible = true;
+                if (Storage.DataLoaded)
+                {
+                    ResultObj result = await Task.Run(() => Contacts.GetContacts(Storage.User.Id));
+                    contacts = result.Contacts;
+                    SetDialogs();
+                    DialogList.IsVisible = true;
+                }
+                DialogList.IsRefreshing = false;
             }
-            DialogList.IsRefreshing = false;
+            catch (System.Exception ex)
+            {
+                await DisplayAlert("Ошибка", ex.Message, "OK");
+            }
         }
     }
 }

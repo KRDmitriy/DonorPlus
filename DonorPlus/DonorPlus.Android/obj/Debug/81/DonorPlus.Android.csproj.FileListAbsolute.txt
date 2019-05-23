@@ -287,13 +287,6 @@ D:\Projects\DonorPlus\DonorPlus\DonorPlus.Android\bin\Debug\Plugin.Messaging.dll
 D:\Projects\DonorPlus\DonorPlus\DonorPlus.Android\bin\Debug\Plugin.Settings.Abstractions.dll.mdb
 D:\Projects\DonorPlus\DonorPlus\DonorPlus.Android\bin\Debug\Plugin.Settings.dll.mdb
 D:\Projects\DonorPlus\DonorPlus\DonorPlus.Android\bin\Debug\Xamarin.Essentials.dll.mdb
-D:\Projects\DonorPlus\DonorPlus\DonorPlus.Android\obj\Debug\81\linksrc\DonorPlus.dll.mdb
-D:\Projects\DonorPlus\DonorPlus\DonorPlus.Android\obj\Debug\81\linksrc\Plugin.Connectivity.dll.mdb
-D:\Projects\DonorPlus\DonorPlus\DonorPlus.Android\obj\Debug\81\linksrc\Plugin.Messaging.dll.mdb
-D:\Projects\DonorPlus\DonorPlus\DonorPlus.Android\obj\Debug\81\linksrc\Plugin.Settings.Abstractions.dll.mdb
-D:\Projects\DonorPlus\DonorPlus\DonorPlus.Android\obj\Debug\81\linksrc\Plugin.Settings.dll.mdb
-D:\Projects\DonorPlus\DonorPlus\DonorPlus.Android\obj\Debug\81\linksrc\Xamarin.Essentials.dll.mdb
-D:\Projects\DonorPlus\DonorPlus\DonorPlus.Android\obj\Debug\81\linksrc\DonorPlusLib.dll.mdb
 D:\Projects\DonorPlus\DonorPlus\DonorPlus.Android\bin\Debug\DonorPlusLib.dll.mdb
 D:\Projects\DonorPlus\DonorPlus\DonorPlus.Android\obj\Debug\81\android\assets\DonorPlus.dll.mdb
 D:\Projects\DonorPlus\DonorPlus\DonorPlus.Android\obj\Debug\81\android\assets\DonorPlusLib.dll.mdb
@@ -330,8 +323,6 @@ D:\Projects\DonorPlus\DonorPlus\DonorPlus.Android\obj\Debug\81\android\assets\Sy
 D:\Projects\DonorPlus\DonorPlus\DonorPlus.Android\obj\Debug\81\android\assets\Xamarin.Forms.Core.pdb
 D:\Projects\DonorPlus\DonorPlus\DonorPlus.Android\obj\Debug\81\android\assets\Xamarin.Forms.Platform.Android.pdb
 D:\Projects\DonorPlus\DonorPlus\DonorPlus.Android\obj\Debug\81\android\assets\Xamarin.Forms.Xaml.pdb
-D:\Projects\DonorPlus\DonorPlus\DonorPlus\bin\Debug\netstandard2.0\DonorPlus.dll
-D:\Projects\DonorPlus\DonorPlus\DonorPlus.Android\bin\Debug\DonorPlus.dll.mdb
 D:\Projects\DonorPlus\DonorPlus\DonorPlus.Android\obj\Debug\81\linksrc\DonorPlus.dll.mdb
 D:\Projects\DonorPlus\DonorPlus\DonorPlus.Android\obj\Debug\81\linksrc\Plugin.Connectivity.dll.mdb
 D:\Projects\DonorPlus\DonorPlus\DonorPlus.Android\obj\Debug\81\linksrc\Plugin.Messaging.dll.mdb

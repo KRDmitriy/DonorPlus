@@ -5212,12 +5212,6 @@ namespace DonorPlus.Droid
 			// aapt resource value: 0x7F0C001A
 			public const int bottom = 2131492890;
 			
-			// aapt resource value: 0x7F020174
-			public const int bottomtab.navarea = 2130837876;
-			
-			// aapt resource value: 0x7F020175
-			public const int bottomtab.tabbar = 2130837877;
-			
 			// aapt resource value: 0x7F0C001B
 			public const int buttonPanel = 2131492891;
 			
@@ -5290,12 +5284,6 @@ namespace DonorPlus.Droid
 			// aapt resource value: 0x7F0C0032
 			public const int @fixed = 2131492914;
 			
-			// aapt resource value: 0x7F020176
-			public const int flyoutcontent.appbar = 2130837878;
-			
-			// aapt resource value: 0x7F020177
-			public const int flyoutcontent.recycler = 2130837879;
-			
 			// aapt resource value: 0x7F0C0009
 			public const int forever = 2131492873;
 			
@@ -5340,18 +5328,6 @@ namespace DonorPlus.Droid
 			
 			// aapt resource value: 0x7F0C0041
 			public const int list_item = 2131492929;
-			
-			// aapt resource value: 0x7F020178
-			public const int main.appbar = 2130837880;
-			
-			// aapt resource value: 0x7F020181
-			public const int main.scrollview = 2130837889;
-			
-			// aapt resource value: 0x7F020180
-			public const int main.tablayout = 2130837888;
-			
-			// aapt resource value: 0x7F020179
-			public const int main.toolbar = 2130837881;
 			
 			// aapt resource value: 0x7F0C0042
 			public const int masked = 2131492930;
@@ -5547,15 +5523,6 @@ namespace DonorPlus.Droid
 			
 			// aapt resource value: 0x7F0C0069
 			public const int select_dialog_listview = 2131492969;
-			
-			// aapt resource value: 0x7F020182
-			public const int shellcontent.appbar = 2130837890;
-			
-			// aapt resource value: 0x7F020184
-			public const int shellcontent.scrollview = 2130837892;
-			
-			// aapt resource value: 0x7F020183
-			public const int shellcontent.toolbar = 2130837891;
 			
 			// aapt resource value: 0x7F0C006A
 			public const int shortcut = 2131492970;

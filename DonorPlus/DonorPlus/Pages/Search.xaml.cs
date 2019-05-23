@@ -172,7 +172,6 @@ namespace DonorPlus
                 }
                 ((ListView)sender).SelectedItem = null;
                 ResultList.IsEnabled = true;
-                Storage.Friend = null;
                 System.GC.Collect();
             }
             catch (System.Exception ex)
