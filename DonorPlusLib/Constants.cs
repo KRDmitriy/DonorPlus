@@ -4,11 +4,11 @@ namespace DonorPlusLib
 {
     public static class Constants
     {
-        public const string BASENAME = "Users";
-        public const string SERVER = "donorplus";
-        public const string DATABASE = "DonorPlus";
-        public const string LOGIN = "mainadmin";
-        public const string PASSWORD = "Blood1234";
+        public const string BASENAME = "";
+        public const string SERVER = "";
+        public const string DATABASE = "";
+        public const string LOGIN = "";
+        public const string PASSWORD = "";
 
         /// <summary>
         /// Создание нового MD5 хэша
